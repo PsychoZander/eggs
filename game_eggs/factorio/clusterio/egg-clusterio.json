@@ -7,7 +7,7 @@
     "exported_at": "2022-10-05T14:47:36+01:00",
     "name": "Clusterio",
     "author": "psychoalex@thevcbc.com",
-    "description": "a generic node.js egg\r\n\r\nThis will clone a git repo. it defaults to master if no branch is specified.\r\n\r\nInstalls the node_modules on install. If you set user_upload then I assume you know what you are doing.",
+    "description": "a custom Clusterio egg\r\n\r\nThis egg allows quick and easy setup of a Clusterio Cluster inside Pterodactyl\r\n\r\nInstalls Clusterio with a bit of input from the user like setting the Cluster Name, Server Admin, Server Mode etc",
     "features": null,
     "docker_images": {
         "ghcr.io\/parkervcp\/yolks:nodejs_17": "ghcr.io\/parkervcp\/yolks:nodejs_17",
@@ -74,7 +74,7 @@
         },
         {
             "name": "Master URL",
-            "description": "Connection URL to the Master server, can be an internal address if you have allocated an additional internal port to the Master Server.\r\n\r\nRequired on:\r\nSlave",
+            "description": "Connection URL to the Master server, can be an internal address if you have allocated an additional internal port to the Master Server.\r\n\r\nExample:\r\nhttp:\/\/yourip:yourport\/\r\n\r\nRequired on:\r\nSlave",
             "env_variable": "MASTER_URL",
             "default_value": "",
             "user_viewable": true,
@@ -94,7 +94,7 @@
         },
         {
             "name": "Plugins",
-            "description": "Clusterio Plugins to install, space separate list.\r\n\r\nExample:\r\n@clusterio\/plugin-subspace_storage @clusterio\/plugin-global_chat @clusterio\/plugin-research_sync @clusterio\/plugin-inventory_sync\r\n\r\nRequired on:\r\nAll",
+            "description": "Clusterio Plugins to install, space separate list.\r\n\r\nExample:\r\n@clusterio\/plugin-global_chat @clusterio\/plugin-research_sync @clusterio\/plugin-statistics_exporter @clusterio\/plugin-player_auth @clusterio\/plugin-inventory_sync @hornwitser\/server_select\r\nOptional Extras: \r\n@clusterio\/plugin-subspace_storage (requires the mod to be downloaded)\r\n\r\nRequired on:\r\nAll",
             "env_variable": "PLUGINS",
             "default_value": "",
             "user_viewable": true,
