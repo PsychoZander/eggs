@@ -104,7 +104,7 @@
         },
         {
             "name": "Cluster Name",
-            "description": "The Name of your Master server cluster.\r\n\r\nRequired:\r\nMaster",
+            "description": "The Name of your Clsuter Master server..\r\n\r\nRequired:\r\nMaster",
             "env_variable": "CLUSTER_NAME",
             "default_value": "Your Cluster",
             "user_viewable": true,
